@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+
+  <% include templates/navbar.ejs %>
+
+  <h1>Login :</h1>
+  
+  <%= error %>
+  <form method="post">
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required style="margin: 10px; width:250px; padding: 5px"> </br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required style="margin: 10px; width:250px; padding: 5px"> </br>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" style="margin: 10px; margin-left: 20px; width:120px; padding: 5px">Login</button>
+    </div>
+  </div>
+</form>
+
+    
+  </body>
+</html>

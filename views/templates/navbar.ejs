@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">DB's Blogging Site</a>
+    </div>
+
+    <% if( layout == 'out' ){ %>
+        <ul class="nav navbar-nav">
+          <li <% if(title=="Home") { %> class="active" <% } %> ><a href="/">Home</a></li>
+          <li <% if(title=="About") { %> class="active" <% } %>><a href="/about">About</a></li>
+          <li <% if(title=="Blogs") { %> class="active" <% } %>><a href="/blogs">Blogs</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li <% if(title=="Signup") { %> class="active" <% } %> ><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li <% if(title=="Login") { %> class="active" <% } %> ><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    <% } else { %>
+        <ul class="nav navbar-nav">
+          <li <% if(title=="Home") { %> class="active" <% } %> ><a href="/">Home</a></li>
+          <li <% if(title=="About") { %> class="active" <% } %>><a href="/about">About</a></li>
+          <li <% if(title=="Blogs") { %> class="active" <% } %>><a href="/blogs">Blogs</a></li>
+          <li <% if(title=="Users") { %> class="active" <% } %>><a href="/users">Users</a></li>
+          <li <% if(title=="New Blog") { %> class="active" <% } %>><a href="/newblog">New Blog</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+        </ul>
+    <% } %>
+    
+  </div>
+</nav>

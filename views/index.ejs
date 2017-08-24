@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+
+  </head>
+  <body>
+	
+	<% include templates/navbar.ejs %>
+
+    <h1><%= title %></h1>
+    <p>Welcome to my Blogging Site</p>
+    <ul>
+    	<% for(var i=0; i<5; i++) { %>
+    		<li>Item</li>
+    	<% } %>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+
+  <% include templates/navbar.ejs %>
+
+  <h1>Create a new Account :</h1>
+  
+  <%= error %>
+  <form method="post">
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required style="margin: 10px; width:250px; padding: 5px"> </br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required style="margin: 10px; width:250px; padding: 5px"> </br>
+
+    <div class="clearfix">
+      <button type="button"  class="cancelbtn" style="margin: 10px; margin-left: 10px; width:120px; padding: 5px">Cancel</button>
+      <button type="submit" class="signupbtn" style="margin: 10px; margin-left: 20px; width:120px; padding: 5px">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+    
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+
+  <% include templates/navbar.ejs %>
+
+  <h1>Recent Blog Posts</h1>
+    <% for(let i = 0; i < posts.length; i++) { %>
+        <% if(i!=0) { %><hr style="border-width: 3px"><% } %>
+        <article>
+            <h3><%= posts[i].title %></h3>
+            <p><%= posts[i].content %></p>
+            <h4 style="margin-left: 75%"> - <%= posts[i].author %></p>
+        </article>
+    <% } %>
+  </body>
+</html>

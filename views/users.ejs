@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+
+  <% include templates/navbar.ejs %>
+
+  <h1>List of Users</h1>
+    <table>
+      <tr>
+      <!-- Why is the CSS not applying on the HTML rendered using node.js properly? -->
+        <th style="padding: 10px">Username</th>
+        <th style="padding: 10px">Password</th>
+      </tr>
+        <%  console.log("Received Data : ", user_list , user_list.length ) %>
+        <% for(var i = 0; i < user_list.length; i++) { %>
+            <tr>
+                <td style="padding: 10px"><%= user_list[i].username %></td>
+                <td style="padding: 10px"><%= user_list[i].password %></td>
+            </tr>
+        <% } %>
+
+    </table>
+
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+	
+	<% include templates/navbar.ejs %>
+
+    <h1><%= title %> Page</h1>
+    <p>This is the about page</p>
+    <% if(title=="About") %>
+      <p>Condition True</p>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include templates/header.ejs %>
+  </head>
+  <body>
+
+  <% include templates/navbar.ejs %>
+
+  <h1>Create a new Blog :</h1>
+  <%= user.username %>
+  
+  <form action="/action_blog" method="post">
+  <div class="container">
+  
+    <input type="text" placeholder="Title" name="title" required style="margin: 10px; width:600px; padding: 5px">
+    </br>
+
+    <textarea name="content" rows="10" cols="30" placeholder="Content" style="margin: 10px; width:600px; padding: 5px"></textarea>
+  
+    </br>
+
+    <input type="text" placeholder="Author's Name" name="author" required style="margin: 10px; width:600px; padding: 5px">
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" style="margin: 10px; width:200px; margin-left: 200px; padding: 5px">Save</button>
+    </div>
+  </div>
+</form>
+
+    
+  </body>
+</html>
